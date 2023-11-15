@@ -16,7 +16,7 @@ import {
   SiMongoosedotws,
   SiExpress,
   SiPostman,
-} from "react-icons/Si";
+} from "react-icons/si";
 import Card from "./components/Card";
 
 export default function Home() {
