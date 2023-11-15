@@ -1,4 +1,4 @@
-import drSantana2 from "../public/IMG_6793.jpg";
+import ErnestoGarSa from "../public/IMG_6793.jpg";
 import {
   FaHtml5,
   FaCss3Alt,
@@ -21,9 +21,11 @@ import Card from "./components/Card";
 
 export default function Home() {
   return (
-    <main className="bg-cyan-950 flex flex-wrap h-screen">
+    <main className="bg-cyan-950 flex flex-wrap h-screen w-screen">
       <div className=" max-w-[60%] my-auto mx-auto">
-        <p className="text-lg text-green-400 mt-6 ms-20">Hi, my name is</p>
+        <p className="text-lg text-green-400 mt-28 lg:mt-6 ms-20 ">
+          Hi, my name is
+        </p>
         <h1 className="text-7xl font-semibold text-slate-200 mt-1 ms-20">
           Ernesto García.
         </h1>
@@ -57,7 +59,7 @@ export default function Home() {
         <Card
           title="Interactive website"
           description="Website built based on JavaScript exercises"
-          image={drSantana2}
+          image={ErnestoGarSa}
           link="https://www.google.com"
         />
       </div>
