@@ -1,5 +1,5 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { HiOutlineMail, HiLocationMarker } from "react-icons/Hi";
+import { HiOutlineMail, HiLocationMarker } from "react-icons/hi";
 import Link from "next/link";
 import ErnestoGarSa from "../../public/IMG_6793.jpg";
 import Image from "next/image";
