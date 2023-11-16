@@ -18,7 +18,6 @@ const Card = (props) => {
         <p className="text-xl font-bold text-green-500">{title}</p>
         <p className="text-lg font-medium text-slate-200">{description}</p>
         <Link href={link}>Visit now</Link>
-        <button className="ease-in duration-300 ">Hola</button>
       </div>
     </div>
   );

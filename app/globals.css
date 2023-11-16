@@ -8,6 +8,6 @@
 
 .icon:hover {
   color: bisque;
-  transform: scale(1.3);
+  transform: scale(1.4);
   transition: ease 500;
 }

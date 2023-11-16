@@ -21,23 +21,23 @@ import Card from "./components/Card";
 
 export default function Home() {
   return (
-    <main className="bg-cyan-950 flex flex-wrap h-screen w-screen">
-      <div className=" max-w-[60%] my-auto mx-auto">
-        <p className="text-lg text-green-400 mt-28 lg:mt-6 ms-20 ">
+    <main className="bg-cyan-950 md:h-min-screen lg:flex lg:flex-wrap lg:h-screen lg:w-screen ">
+      <div className="pt-28 lg:max-w-[60%] lg:my-auto lg:mx-auto ">
+        <p className="text-xl text-green-400 mx-14 mt-6 md:mx-24 lg:mt-auto lg:ms-20 ">
           Hi, my name is
         </p>
-        <h1 className="text-7xl font-semibold text-slate-200 mt-1 ms-20">
+        <h1 className=" text-6xl mt-1 mx-14 md:mx-24 md:text-7xl lg:text-7xl lg:mt-1 lg:ms-20  font-semibold text-slate-200  ">
           Ernesto García.
         </h1>
-        <h2 className="text-6xl font-semibold text-slate-400 mt-1 ms-20">
+        <h2 className="text-5xl mt-1 mx-14 md:mx-24 md:text-6xl lg:text-6xl lg:mt-1 lg:ms-20 font-semibold text-slate-400 ">
           I create things for the web.
         </h2>
-        <p className="ms-20 mt-5 text-xl text-slate-500 ">
+        <p className="mt-5 text-xl px-5 text-center md:mx-24 lg:text-left lg:ms-14 text-slate-500 ">
           I´m a FullStack developer with a background in biomedical engineering
           and a passion for software development, I believe I can bring a unique
           perspective and skill set to your products.
         </p>
-        <div className="icons flex flex-wrap gap-4 max-w-[55%] mx-auto mt-6 ">
+        <div className="icons flex flex-wrap mt-6 gap-4 ps-4 pe-3 md:px-28  lg:px-28  ">
           <FaHtml5 className="icon w-14 h-14 " />
           <FaCss3Alt className="icon w-14 h-14" />
           <FaSass className="icon w-14 h-14" />
@@ -54,13 +54,15 @@ export default function Home() {
           <FaJava className="icon w-14 h-14" />
         </div>
       </div>
-      <div className="my-auto mx-auto">
-        <h2 className="text-4xl text-white">Projects</h2>
+      <div className="py-5 px-3 xl:my-auto xl:mx-auto">
+        <h2 className="text-4xl text-center mb-3 xl:text-4xl text-white">
+          Projects
+        </h2>
         <Card
           title="Interactive website"
           description="Website built based on JavaScript exercises"
           image={ErnestoGarSa}
-          link="https://www.google.com"
+          link="https://interactive-website-pearl.vercel.app"
         />
       </div>
     </main>
