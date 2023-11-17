@@ -1,7 +1,10 @@
-import ErnestoGarSa from "../public/IMG_6793.jpg";
+import Interactive from "../public/Interactive.png";
+import Encrypter from "../public/Encrypter.png";
+import DrCarlos from "../public/DrCarlos.png";
 import {
   FaHtml5,
   FaCss3Alt,
+  FaGithub,
   FaSass,
   FaBootstrap,
   FaJsSquare,
@@ -18,11 +21,12 @@ import {
   SiPostman,
 } from "react-icons/si";
 import Card from "./components/Card";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="bg-cyan-950 md:h-min-screen lg:flex lg:flex-wrap lg:h-screen lg:w-screen ">
-      <div className="pt-28 lg:max-w-[60%] lg:my-auto lg:mx-auto ">
+    <main className="bg-cyan-950 md:h-min-screen lg:flex lg:flex-wrap lg:min-h-screen  lg:w-screen ">
+      <div className="pt-28 lg:max-w-[55%] lg:my-auto lg:mx-auto ">
         <p className="text-xl text-green-400 mx-14 mt-6 md:mx-24 lg:mt-auto lg:ms-20 ">
           Hi, my name is
         </p>
@@ -38,32 +42,52 @@ export default function Home() {
           perspective and skill set to your products.
         </p>
         <div className="icons flex flex-wrap mt-6 gap-4 ps-4 pe-3 md:px-28  lg:px-28  ">
-          <FaHtml5 className="icon w-14 h-14 " />
-          <FaCss3Alt className="icon w-14 h-14" />
-          <FaSass className="icon w-14 h-14" />
-          <FaBootstrap className="icon w-14 h-14" />
-          <SiTailwindcss className="icon w-14 h-14" />
-          <FaJsSquare className="icon w-14 h-14" />
-          <FaReact className="icon w-14 h-14" />
-          <SiNextdotjs className="icon w-14 h-14" />
-          <SiMongodb className="icon w-14 h-14" />
-          <SiMongoosedotws className="icon w-14 h-14 color-text-slate-200" />
-          <SiExpress className="icon w-14 h-14" />
-          <SiPostman className="icon w-14 h-14" />
-          <FaNodeJs className="icon w-14 h-14" />
-          <FaJava className="icon w-14 h-14" />
+          <FaHtml5 className="icon hover:text-lime-400 w-14 h-14 " />
+          <FaCss3Alt className="icon hover:text-lime-400 w-14 h-14" />
+          <FaSass className="icon hover:text-lime-400 w-14 h-14" />
+          <FaBootstrap className="icon hover:text-lime-400 w-14 h-14" />
+          <SiTailwindcss className="icon hover:text-lime-400 w-14 h-14" />
+          <FaJsSquare className="icon hover:text-lime-400 w-14 h-14" />
+          <FaReact className="icon hover:text-lime-400 w-14 h-14" />
+          <SiNextdotjs className="icon hover:text-lime-400 w-14 h-14" />
+          <SiMongodb className="icon hover:text-lime-400 w-14 h-14" />
+          <SiMongoosedotws className="icon hover:text-lime-400 w-14 h-14 color-text-slate-200" />
+          <SiExpress className="icon hover:text-lime-400 w-14 h-14" />
+          <SiPostman className="icon hover:text-lime-400 w-14 h-14" />
+          <FaNodeJs className="icon hover:text-lime-400 w-14 h-14" />
+          <FaJava className="icon hover:text-lime-400 w-14 h-14" />
         </div>
       </div>
-      <div className="py-5 px-3 xl:my-auto xl:mx-auto">
+      <div className="py-5 px-3 xl:my-auto xl:mx-auto flex flex-col gap-3 justify-center align-start min-[1024px]:align-middle max-[2290px]:mx-auto">
         <h2 className="text-4xl text-center mb-3 xl:text-4xl text-white">
           Projects
         </h2>
         <Card
           title="Interactive website"
           description="Website built based on JavaScript exercises"
-          image={ErnestoGarSa}
+          image={Interactive}
           link="https://interactive-website-pearl.vercel.app"
         />
+        <Card
+          title="Text encrypter"
+          description="Website built for Oracle ONE challenge"
+          image={Encrypter}
+          link="https://ernestogarsa.github.io/Challenge_Oracle_One/"
+        ></Card>
+        <Card
+          title="Dr. Carlos García main website (in progress)"
+          description="Plastic Surgeon main website"
+          image={DrCarlos}
+          link="https://carlosgs.vercel.app/"
+        ></Card>
+        <Link href="https://www.github.com/ErnestoGarSa" target="_blank">
+          <p
+            className="text-xl text-slate-300 text-center hover:text-lime-400"
+            target="_blank"
+          >
+            If your want to see these and others repositories, click here!
+          </p>
+        </Link>
       </div>
     </main>
   );
