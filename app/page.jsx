@@ -78,7 +78,7 @@ export default function Home() {
           title="Dr. Carlos García main website (in progress)"
           description="Plastic Surgeon main website"
           image={DrCarlos}
-          link="https://carlosgs.vercel.app/"
+          link="https://www.drcarlosgsantana.com"
         ></Card>
         <Link href="https://www.github.com/ErnestoGarSa" target="_blank">
           <p
