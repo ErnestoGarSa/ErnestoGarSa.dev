@@ -63,6 +63,12 @@ export default function Home() {
           Projects
         </h2>
         <Card
+          title="Dr. Carlos García main website"
+          description="Plastic Surgeon main website"
+          image={DrCarlos}
+          link="https://www.drcarlosgsantana.com"
+        ></Card>
+        <Card
           title="Interactive website"
           description="Website built based on JavaScript exercises"
           image={Interactive}
@@ -73,12 +79,6 @@ export default function Home() {
           description="Website built for Oracle ONE challenge"
           image={Encrypter}
           link="https://ernestogarsa.github.io/Challenge_Oracle_One/"
-        ></Card>
-        <Card
-          title="Dr. Carlos García main website (in progress)"
-          description="Plastic Surgeon main website"
-          image={DrCarlos}
-          link="https://www.drcarlosgsantana.com"
         ></Card>
         <Link href="https://www.github.com/ErnestoGarSa" target="_blank">
           <p
