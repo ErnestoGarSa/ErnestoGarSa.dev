@@ -69,17 +69,17 @@ export default function Home() {
           link="https://www.drcarlosgsantana.com"
         ></Card>
         <Card
-          title="Interactive website"
-          description="Website built based on JavaScript exercises"
-          image={Interactive}
-          link="https://interactive-website-pearl.vercel.app"
-        />
-        <Card
           title="Text encrypter"
           description="Website built for Oracle ONE challenge"
           image={Encrypter}
           link="https://ernestogarsa.github.io/Challenge_Oracle_One/"
         ></Card>
+        <Card
+          title="Interactive website"
+          description="Website built based on JavaScript exercises"
+          image={Interactive}
+          link="https://interactive-website-pearl.vercel.app"
+        />
         <Link href="https://www.github.com/ErnestoGarSa" target="_blank">
           <p
             className="text-xl text-slate-300 text-center hover:text-lime-400"
