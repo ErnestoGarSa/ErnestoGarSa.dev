@@ -72,7 +72,7 @@ export default function Home() {
           title="Text encrypter"
           description="Website built for Oracle ONE challenge"
           image={Encrypter}
-          link="https://ernestogarsa.github.io/Challenge_Oracle_One/"
+          link="https://ernestogarsa.github.io/Alura-challenge-1/"
         ></Card>
         <Card
           title="Interactive website"
