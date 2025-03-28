@@ -2,7 +2,7 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail, HiLocationMarker } from "react-icons/hi";
 import Link from "next/link";
-import ErnestoGarSa from "../../public/IMG_6793.jpg";
+import ErnestoLogo from "@/public/Ernesto.png";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -22,7 +22,7 @@ const Navbar = () => {
           <div className="flex items-center gap-5">
             <Image
               className="h-12 w-12 rounded-full"
-              src={ErnestoGarSa}
+              src={ErnestoLogo}
               alt=""
             />
             <Link

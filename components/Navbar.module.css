@@ -1,0 +1,33 @@
+/* @root {
+  --color-principal--: rgb(15,51,68);
+  --color-secundario--: #33b4eb;
+  --color-opcional--: rgb(91, 198, 96);
+  --color-opcional2--: rgb(131, 204, 55);
+} */
+
+.nav {
+  background-color: rgb(15, 51, 68);
+}
+
+.img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+}
+
+.title {
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.title:hover {
+  color: rgb(131, 204, 55);
+  animation-duration: 2s;
+}
+
+.button {
+  display: none;
+}
+
+/* "text-white text-xl font-semibold hover:text-lime-400 duration-300" */
