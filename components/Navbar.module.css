@@ -15,19 +15,29 @@
   border-radius: 100%;
 }
 
-.title {
-  color: white;
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
 .title:hover {
   color: rgb(131, 204, 55);
-  animation-duration: 2s;
 }
 
-.button {
-  display: none;
+.link:hover {
+  color: rgb(131, 204, 55);
+}
+
+.icon {
+  width: 3rem;
+  height: 3rem;
+  color: white;
+}
+
+.svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .button {
+    display: none;
+  }
 }
 
 /* "text-white text-xl font-semibold hover:text-lime-400 duration-300" */

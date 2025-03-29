@@ -4,7 +4,9 @@ import { HiOutlineMail, HiLocationMarker } from "react-icons/hi";
 import Link from "next/link";
 import ErnestoLogo from "@/public/Ernesto.png";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+import classes from "./Navbar.module.css";
 
 const Navbar = () => {
   let emailAddress = "ernestogarsa.dev@gmail.com";
@@ -15,77 +17,151 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const [isMovil, setIsMovil] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMovil(window.innerWidth < 768); // Cambia a `true` si es menor a 768px
+    };
+
+    checkScreenSize(); // Llamar una vez al inicio
+
+    window.addEventListener("resize", checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
   return (
-    <nav className="bg-cyan-950 py-4 absolute w-screen">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-5">
-            <Image
-              className="h-12 w-12 rounded-full"
-              src={ErnestoLogo}
-              alt=""
-            />
-            <Link
-              href="/"
-              className="text-white text-xl font-semibold hover:text-lime-400 duration-300"
+    <nav className={`${classes.nav} navbar fixed-top px-2`}>
+      <div className="container-fluid ">
+        <Image
+          className={classes.img}
+          src={ErnestoLogo}
+          alt="Logo de ErnestoGarSa"
+        />
+        <Link
+          className="navbar-brand text-light fw-bold text-decoration-none  fs-3"
+          href="/"
+        >
+          ErnestoGarSa
+        </Link>
+        {isMovil && (
+          <>
+            <button
+              className=" text-light"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
             >
-              ErnestoGarSa
-            </Link>
-          </div>
-          <button
-            onClick={toggleMenu}
-            className="text-white focus:outline-none md:hidden"
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
+              <svg
+                className={`${classes.svg}`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                ></path>
+              </svg>
+            </button>
+            <div
+              className={`offcanvas offcanvas-end `}
+              tabIndex="-1"
+              id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16m-7 6h7"
-              ></path>
-            </svg>
-          </button>
+              <div className={`offcanvas-header ${classes.nav} text-light`}>
+                <p
+                  className="offcanvas-title fs-2 fw-bold"
+                  id="offcanvasNavbarLabel"
+                >
+                  ErnestoGarSa
+                </p>
+                <button
+                  type="button "
+                  className={`btn-close btn-close-white`}
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div className={`offcanvas-body ${classes.nav}`}>
+                <ul
+                  className={`navbar-nav justify-content-end flex-grow-1 pe-3 `}
+                >
+                  <li className="nav-item">
+                    <Link
+                      className={`${classes.link} text-decoration-none`}
+                      href="https://www.github.com/ErnestoGarSa"
+                      target="_blank"
+                    >
+                      <p className=" text-light fs-3 text-center">GitHub</p>
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link
+                      className={`${classes.link} text-decoration-none`}
+                      href="https://www.linkedin.com/in/ErnestoGarSa"
+                      target="_blank"
+                    >
+                      <p className=" text-light fs-3 text-center">LinkedIn</p>
+                    </Link>
+                  </li>
+                  <li className="nav-item dropdown">
+                    <Link
+                      className={`${classes.link} text-decoration-none`}
+                      href={`mailto:${emailAddress}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <p className=" text-light fs-3 text-center">Correo</p>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </>
+        )}
+        {!isMovil && (
           <ul
-            className={`md:flex space-x-4 text-white text-lg ${
-              isOpen ? "block" : "hidden md:block"
+            className={`d-md-flex gap-x-4 text-light ${
+              isOpen ? "d-block" : "d-none d-md-block"
             }`}
           >
-            <li className="md:ml-8 text-xl md:my-0 my-5 ms-4">
+            <li className="mt-md-4 ">
               <Link
-                className="hover:text-lime-400 duration-300"
+                className={`${classes.link}`}
                 href="https://www.github.com/ErnestoGarSa"
                 target="_blank"
               >
-                <FaGithub className="nav-icon w-12 h-12" />
+                <FaGithub className={`${classes.icon}`} />
               </Link>
             </li>
-            <li className="md:ml-8 text-xl md:my-0 my-5">
+            <li className="mt-md-4">
               <Link
-                className="hover:text-lime-400 duration-300"
+                className={`${classes.link}`}
                 href="https://www.linkedin.com/in/ErnestoGarSa"
                 target="_blank"
               >
-                <FaLinkedin className="nav-icon w-12 h-12" />
+                <FaLinkedin className={`${classes.icon}`} />
               </Link>
             </li>
-            <li className="md:ml-8 text-xl md:my-0 my-5">
+            <li className="mt-md-4">
               <Link
-                className="hover:text-lime-400 duration-300"
+                className={`${classes.link}`}
                 href={`mailto:${emailAddress}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <HiOutlineMail className="nav-icon w-12 h-12" />
+                <HiOutlineMail className={`${classes.icon}`} />
               </Link>
             </li>
           </ul>
-        </div>
+        )}
       </div>
     </nav>
   );

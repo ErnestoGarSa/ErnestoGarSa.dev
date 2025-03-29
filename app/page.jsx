@@ -1,6 +1,8 @@
 import Interactive from "../public/Interactive.png";
 import Encrypter from "../public/Encrypter.png";
 import DrCarlos from "../public/DrCarlos.png";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 import {
   FaHtml5,
   FaCss3Alt,
