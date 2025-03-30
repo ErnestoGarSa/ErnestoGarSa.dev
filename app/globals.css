@@ -2,15 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.icon {
-  color: slategray;
-}
-
-.icon:hover {
-  transform: scale(1.4);
-  transition: ease 500;
-}
-
 .image-container {
   width: 100px;
   height: 100px;
