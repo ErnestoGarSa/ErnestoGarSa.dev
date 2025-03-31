@@ -23,10 +23,20 @@
   color: rgb(131, 204, 55);
 }
 
+.lin {
+  list-style: none;
+}
+
 .icon {
   width: 3rem;
   height: 3rem;
   color: white;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 .svg {
@@ -39,5 +49,3 @@
     display: none;
   }
 }
-
-/* "text-white text-xl font-semibold hover:text-lime-400 duration-300" */

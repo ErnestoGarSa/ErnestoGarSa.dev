@@ -47,7 +47,7 @@ const Navbar = () => {
         {isMovil && (
           <>
             <button
-              className=" text-light"
+              className={`text-light ${classes.button}`}
               type="button"
               data-bs-toggle="offcanvas"
               data-bs-target="#offcanvasNavbar"
@@ -91,11 +91,11 @@ const Navbar = () => {
               </div>
               <div className={`offcanvas-body ${classes.nav}`}>
                 <ul
-                  className={`navbar-nav justify-content-end flex-grow-1 pe-3 `}
+                  className={`navbar-nav justify-content-end flex-grow-1  p-3 gap-3 ${classes.lin}`}
                 >
-                  <li className="nav-item">
+                  <li className={`nav-item `}>
                     <Link
-                      className={`${classes.link} text-decoration-none`}
+                      className={`${classes.link}  text-decoration-none`}
                       href="https://www.github.com/ErnestoGarSa"
                       target="_blank"
                     >
@@ -128,7 +128,7 @@ const Navbar = () => {
         )}
         {!isMovil && (
           <ul
-            className={`d-md-flex gap-x-4 text-light ${
+            className={`d-md-flex gap-3 text-light ${classes.lin} ${
               isOpen ? "d-block" : "d-none d-md-block"
             }`}
           >
