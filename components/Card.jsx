@@ -1,18 +1,27 @@
 import Image from "next/image";
 import Link from "next/link";
-import { TbWorldWww } from "react-icons/tb";
+
+import classes from "./Card.module.css";
 
 const Card = (props) => {
   const { image, title, description, link } = props;
   return (
-    <Link href={link} target="_blank">
-      <div className=" card flex p-2 border-2 border-lime-500 rounded-xl gap-2 lg:w-auto">
-        <div className="image-container">
-          <Image className="rounded-lg image" src={image} alt="Website photo" />
+    <Link
+      href={link}
+      target="_blank"
+      className={`text-decoration-none ${classes.body}`}
+    >
+      <div className={`${classes.card} d-flex p-2 gap-2`}>
+        <div className={`${classes.image_container}`}>
+          <Image
+            className={`${classes.image}`}
+            src={image}
+            alt="Website photo"
+          />
         </div>
         <div>
-          <p className="text-xl font-bold text-green-500">{title}</p>
-          <p className="text-lg font-medium text-slate-200">{description}</p>
+          <p className={`fs-4 fw-bold ${classes.title}`}>{title}</p>
+          <p className="fs-5 text-light">{description}</p>
         </div>
       </div>
     </Link>

@@ -36,3 +36,59 @@
   transition: ease 500;
   color: rgb(131, 204, 55);
 }
+
+.git {
+  color: rgb(131, 204, 55);
+  transition: ease 500;
+}
+
+.git:hover {
+  color: rgb(131, 204, 55);
+  transition: ease 500;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main {
+    min-height: 100vh;
+  }
+
+  .name {
+    font-size: 4.5rem;
+  }
+
+  .info {
+    max-width: 55%;
+  }
+
+  .description1 {
+    color: rgb(113, 129, 144);
+    font-size: 3rem;
+  }
+
+  .description2 {
+    font-size: 1.8rem;
+    color: rgb(98, 115, 139);
+  }
+
+  .projects {
+    font-size: 2.5rem;
+  }
+
+  .iconsContainer {
+    max-width: 75%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .main {
+    min-height: 100vh;
+  }
+
+  .info {
+    max-width: 55%;
+  }
+
+  .iconsContainer {
+    max-width: 75%;
+  }
+}

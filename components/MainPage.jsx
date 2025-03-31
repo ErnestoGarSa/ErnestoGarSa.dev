@@ -28,8 +28,10 @@ import classes from "./MainPage.module.css";
 
 const MainPage = () => {
   return (
-    <main className={`${classes.main} pt-5 px-3`}>
-      <div className="pt-5">
+    <main className={`${classes.main} pt-5 px-3 d-lg-flex d-lg-100vh`}>
+      <div
+        className={`pt-5 ${classes.info} d-lg-flex flex-column justify-content-center ps-lg-5`}
+      >
         <p className={`${classes.title} fs-3`}>Hi, my name is</p>
         <h1 className={`text-light fw-semibold ${classes.name}`}>
           Ernesto García.
@@ -42,7 +44,9 @@ const MainPage = () => {
           and a passion for software development, I believe I can bring a unique
           perspective and skill set to your products.
         </p>
-        <div className="d-flex flex-wrap gap-3 justify-content-center align-items-center">
+        <div
+          className={`d-flex flex-wrap gap-4 justify-content-center align-items-center ${classes.iconsContainer} mx-md-auto my-md-3 mx-lg-auto my-lg-3 `}
+        >
           <FaHtml5 className={`${classes.icon}`} />
           <FaCss3Alt className={`${classes.icon}`} />
           <FaSass className={`${classes.icon}`} />
@@ -59,23 +63,26 @@ const MainPage = () => {
           <FaJava className={`${classes.icon}`} />
         </div>
       </div>
-      <div>
+      <div className="d-flex flex-column gap-2 justify-content-center align-items-center  my-xl-auto mx-xl-auto">
         <h2 className={`${classes.projects} text-light text-center pt-4`}>
           Projects
         </h2>
         <Card
+          className={` mx-md-auto my-md-3`}
           title="Dr. Carlos García main website"
           description="Plastic Surgeon main website"
           image={DrCarlos}
           link="https://www.drcarlosgsantana.com"
         ></Card>
         <Card
+          className={` mx-md-auto my-md-3`}
           title="Text encrypter"
           description="Website built for Oracle ONE challenge"
           image={Encrypter}
           link="https://ernestogarsa.github.io/Alura-challenge-1/"
         ></Card>
         <Card
+          className={` mx-md-auto my-md-3`}
           title="Interactive website"
           description="Website built based on JavaScript exercises"
           image={Interactive}
@@ -84,9 +91,9 @@ const MainPage = () => {
         <Link
           href="https://www.github.com/ErnestoGarSa"
           target="_blank"
-          className="text-decoration-none"
+          className={`text-decoration-none `}
         >
-          <p className="fs-5 text-light text-center py-2">
+          <p className={`fs-5 text-light text-center py-2 `}>
             If you want to see these and others repositories, click here!
           </p>
         </Link>
