@@ -37,14 +37,8 @@
   color: rgb(131, 204, 55);
 }
 
-.git {
-  color: rgb(131, 204, 55);
-  transition: ease 500;
-}
-
 .git:hover {
   color: rgb(131, 204, 55);
-  transition: ease 500;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {

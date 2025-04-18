@@ -94,7 +94,8 @@ const MainPage = () => {
           className={`text-decoration-none `}
         >
           <p className={`fs-5 text-light text-center py-2 `}>
-            If you want to see these and others repositories, click here!
+            If you want to see these and others repositories,{" "}
+            <span className={classes.git}>click here!</span>
           </p>
         </Link>
       </div>
