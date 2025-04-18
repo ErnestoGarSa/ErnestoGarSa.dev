@@ -19,6 +19,10 @@
   color: rgb(131, 204, 55);
 }
 
+.link {
+  color: white;
+}
+
 .link:hover {
   color: rgb(131, 204, 55);
 }

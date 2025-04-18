@@ -95,30 +95,36 @@ const Navbar = () => {
                 >
                   <li className={`nav-item `}>
                     <Link
-                      className={`${classes.link}  text-decoration-none`}
+                      className="text-decoration-none"
                       href="https://www.github.com/ErnestoGarSa"
                       target="_blank"
                     >
-                      <p className=" text-light fs-3 text-center">GitHub</p>
+                      <p className={`${classes.link}  fs-3 text-center`}>
+                        GitHub
+                      </p>
                     </Link>
                   </li>
                   <li className="nav-item">
                     <Link
-                      className={`${classes.link} text-decoration-none`}
+                      className="text-decoration-none"
                       href="https://www.linkedin.com/in/ErnestoGarSa"
                       target="_blank"
                     >
-                      <p className=" text-light fs-3 text-center">LinkedIn</p>
+                      <p className={`${classes.link}  fs-3 text-center`}>
+                        LinkedIn
+                      </p>
                     </Link>
                   </li>
                   <li className="nav-item dropdown">
                     <Link
-                      className={`${classes.link} text-decoration-none`}
+                      className="text-decoration-none"
                       href={`mailto:${emailAddress}`}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <p className=" text-light fs-3 text-center">Correo</p>
+                      <p className={`${classes.link}  fs-3 text-center`}>
+                        Correo
+                      </p>
                     </Link>
                   </li>
                 </ul>
@@ -133,31 +139,25 @@ const Navbar = () => {
             }`}
           >
             <li className="mt-md-4 ">
-              <Link
-                className={`${classes.link}`}
-                href="https://www.github.com/ErnestoGarSa"
-                target="_blank"
-              >
-                <FaGithub className={`${classes.icon}`} />
+              <Link href="https://www.github.com/ErnestoGarSa" target="_blank">
+                <FaGithub className={`${classes.icon} ${classes.link}`} />
               </Link>
             </li>
             <li className="mt-md-4">
               <Link
-                className={`${classes.link}`}
                 href="https://www.linkedin.com/in/ErnestoGarSa"
                 target="_blank"
               >
-                <FaLinkedin className={`${classes.icon}`} />
+                <FaLinkedin className={`${classes.icon} ${classes.link}`} />
               </Link>
             </li>
             <li className="mt-md-4">
               <Link
-                className={`${classes.link}`}
                 href={`mailto:${emailAddress}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <HiOutlineMail className={`${classes.icon}`} />
+                <HiOutlineMail className={`${classes.icon} ${classes.link}`} />
               </Link>
             </li>
           </ul>
